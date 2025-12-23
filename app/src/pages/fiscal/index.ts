@@ -3,6 +3,6 @@
 // =============================================
 
 export { NotasPage } from './NotasPage';
-export { NotaFormPage } from './NotaFormPage';
+export { default as NotaFormPage } from './NotaFormPage';
 export { NFCePage } from './NFCePage';
 export { ConfigFiscalPage } from './ConfigFiscalPage';

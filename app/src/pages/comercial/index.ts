@@ -3,10 +3,10 @@
 // =============================================
 
 export { ClientesPage } from './ClientesPage';
-export { ClienteFormPage } from './ClienteFormPage';
+export { default as ClienteFormPage } from './ClienteFormPage';
 export { ProdutosPage } from './ProdutosPage';
-export { ProdutoFormPage } from './ProdutoFormPage';
+export { default as ProdutoFormPage } from './ProdutoFormPage';
 export { OrcamentosPage } from './OrcamentosPage';
-export { OrcamentoFormPage } from './OrcamentoFormPage';
+export { default as OrcamentoFormPage } from './OrcamentoFormPage';
 export { VendasPage } from './VendasPage';
-export { VendaFormPage } from './VendaFormPage';
+export { default as VendaFormPage } from './VendaFormPage';
