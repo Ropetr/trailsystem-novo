@@ -32,12 +32,12 @@ export default function LoginPage() {
   }, [searchParams]);
 
   useEffect(() => {
-    // CORREÇÃO: Redirecionar baseado no tipo do usuário
+    // Redirecionar baseado no tipo do usuário
     if (isAuthenticated && !isLoading && user) {
       if (user.type === 'admin') {
         navigate('/admin');
-      } else {
-        navigate('/dashboard');
+      } else if (user.tenantId) {
+        navigate(`/${user.tenantId}/dashboard`);
       }
     }
   }, [isAuthenticated, isLoading, user, navigate]);
@@ -52,11 +52,11 @@ export default function LoginPage() {
       const result = await login(email, password);
       
       if (result.success) {
-        // CORREÇÃO: Redirecionar baseado no tipo do usuário
+        // Redirecionar baseado no tipo do usuário
         if (result.userType === 'admin') {
           navigate('/admin');
-        } else {
-          navigate('/dashboard');
+        } else if (result.tenantId) {
+          navigate(`/${result.tenantId}/dashboard`);
         }
       } else {
         setError(result.message || 'Email ou senha inválidos');
