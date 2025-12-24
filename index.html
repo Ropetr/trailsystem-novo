@@ -463,6 +463,19 @@
     .features {
       padding: 120px 0;
       background: var(--white);
+      position: relative;
+    }
+
+    .features::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to bottom, transparent 0%, var(--white) 100%);
+      pointer-events: none;
+      z-index: 2;
     }
 
     .features-header {
