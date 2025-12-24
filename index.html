@@ -527,7 +527,7 @@
     /* ===== MODULES ===== */
     .modules {
       padding: 120px 0;
-      background: var(--gradient-dark);
+      background: var(--gradient-mesh), var(--gray-50);
       position: relative;
       overflow: hidden;
     }
@@ -554,11 +554,11 @@
     }
 
     .modules-header .section-title {
-      color: var(--white);
+      color: var(--dark);
     }
 
     .modules-header .section-subtitle {
-      color: var(--gray-400);
+      color: var(--gray-600);
       margin: 0 auto;
     }
 
@@ -569,16 +569,16 @@
     }
 
     .module-card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--gray-200);
       border-radius: 16px;
       padding: 24px;
       transition: all 0.3s ease;
     }
 
     .module-card:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--white);
       transform: translateY(-4px);
     }
 
@@ -592,7 +592,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--white);
       border-radius: 10px;
       margin-bottom: 16px;
     }
@@ -607,13 +607,13 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.85rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--dark);
       margin-bottom: 8px;
     }
 
     .module-card p {
       font-size: 0.85rem;
-      color: var(--gray-400);
+      color: var(--gray-600);
     }
 
     .module-badge {
