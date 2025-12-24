@@ -203,7 +203,18 @@
       padding-top: 80px;
       background: var(--gradient-mesh), var(--gray-50);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+    }
+
+    .hero-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 250px;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,1) 100%);
+      pointer-events: none;
+      z-index: 3;
     }
 
     .hero::before {
@@ -228,16 +239,6 @@
       border-radius: 50%;
     }
 
-    .hero-transition {
-      position: absolute;
-      bottom: -150px;
-      left: 0;
-      right: 0;
-      height: 200px;
-      background: linear-gradient(to bottom, var(--gray-50) 0%, transparent 100%);
-      z-index: 1;
-      pointer-events: none;
-    }
 
     .hero-content {
       display: grid;
@@ -1275,7 +1276,7 @@
         </div>
       </div>
     </div>
-      <div class="hero-transition"></div>
+      <div class="hero-fade"></div>
   </section>
 
   <!-- Features -->
